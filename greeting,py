@@ -1,0 +1,4 @@
+# Simple greeting program that requires user input.
+
+name = input("Enter your name: ")
+print (f"Hello, {name}!")
