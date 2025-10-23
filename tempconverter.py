@@ -1,4 +1,4 @@
-# Code that converts temperature from Celsius to Fahrenheit.
+# Code that converts temperature from Celsius to Fahrenheit and viceversa.
 
 import math
 
