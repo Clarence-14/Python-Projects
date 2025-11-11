@@ -1,28 +1,31 @@
 # A program that logs a user’s name and age to a text file, ensuring valid numeric input for age.
 
-def log_user_data(name, age):
-    try:
-        age = int(age)
-    except ValueError:
-        return "Error: Age must be a number."
-    
-    with open("user_data.txt", "a") as file:
-        file.write(f"Name: {name}, Age: {age}\n")
-    
-    return "User data logged successfully."
+import datetime
 
+def log_user_data():
     try:
-        age = int(age)
-    except IOError:
-        return "Error: An I/O error occurred while writing to the file."
-    
-    with open("user_data.txt", "a") as file:
-        file.write(f"Name: {name}, Age: {age}\n")
+        
+        name = input("Enter your name: ")
+        age_input = input("Enter your age: ")
 
-if __name__ == "__main__":
-    name = input("Enter your name: ")
-    age = input("Enter your age: ")
+        try:
+            age = int(age_input)
+        except ValueError:
+            print("Invalid age input. Please enter a numeric value.")
+            return  
     
-    result = log_user_data(name, age)
-    print(result)
+        timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+       
+        try:
+            with open("user_data.txt", "a") as file:
+                file.write(f"Name: {name}, Age: {age}, Logged at: {timestamp}\n")
+            print("User data logged successfully!")
+        except IOError:
+            print("Error writing to file. Please check file permissions.")
+
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+
+# Run the logger
+log_user_data()
 
