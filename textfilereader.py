@@ -7,10 +7,7 @@ def read_file(file_path):
             return content
     except FileNotFoundError:
         return "Error: The file does not exist."
-    try:
-        with open(file_path, 'r') as file:
-            content = file.read()
-            return content
+    
     except IOError:
         return "Error: An I/O error occurred while reading the file."
     
