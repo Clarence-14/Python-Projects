@@ -2,13 +2,16 @@
 
 import random
 
+# Dice Roller Function
 def roll_dice(sides, rolls):
     results = [random.randint(1, sides) for _ in range(rolls)]
     return results
 
+# User Input
 sides = int(input("Enter number of sides on the dice: "))
 rolls = int(input("Enter number of rolls: "))
 
+# Calling the function (rolling the dice) then displaying results.
 dice_results = roll_dice(sides, rolls)
 print("Dice rolls:", dice_results)
 
