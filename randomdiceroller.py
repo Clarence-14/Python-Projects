@@ -1,5 +1,6 @@
 # A program that simulates rolling a dice with a user-specified number of sides and rolls, using the random module.
 
+# Importing the Random Module
 import random
 
 # Dice Roller Function
