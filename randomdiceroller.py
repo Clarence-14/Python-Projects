@@ -16,6 +16,7 @@ rolls = int(input("Enter number of rolls: "))
 dice_results = roll_dice(sides, rolls)
 print("Dice rolls:", dice_results)
 
+#Modification
 print("Sum of rolls:", sum(dice_results))
 print("Average of rolls:", sum(dice_results) / len(dice_results))
 
