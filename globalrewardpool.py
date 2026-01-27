@@ -12,12 +12,12 @@ def merit_system():
         if name.lower() == 'exit':
             break
 
-        # Collect subjects and scores
+        # Inputting the Subjects and Scores of the Students
         try:
-            subject_input = input("Enter subjects separated by commas (e.g., Math, Physics): ")
+            subject_input = input("Enter subjects separated by commas (e.g., Mathematics, English, Kiswahili): ")
             current_subjects = [s.strip() for s in subject_input.split(",") if s.strip()]
             
-            # Update our unique subjects set
+            # Updating the Dictionary with the new Subjects entered
             unique_subjects.update(current_subjects)
 
             scores_input = input(f"Enter scores for {name} separated by commas: ")
