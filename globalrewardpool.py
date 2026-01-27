@@ -27,10 +27,10 @@ def merit_system():
                 print("No scores entered. Skipping student.")
                 continue
 
-            # Logic: Calculate Average
+            # Calculating the Average Score
             average = sum(scores) / len(scores)
             
-            # Logic: Determine Status and Points
+            # Determining the Status based off of the Points of the Student
             if average > 85:
                 status, points = "Elite", 50
             elif 70 <= average <= 85:
@@ -38,13 +38,13 @@ def merit_system():
             else:
                 status, points = "Standard", 0
 
-            # Check if pool can afford the reward
+            # Checking to see if there are points left in the Reward Pool
             if points > reward_pool:
                 print(f"Insufficient pool points! Only {reward_pool} left. Awarding 0.")
                 points = 0
                 status = "Standard (Pool Empty)"
 
-            # Deduct from pool and save record
+            # Subtracting Points from the Reward Pool and Saving the Student Record
             reward_pool -= points
             student_records[name] = {
                 "average": round(average, 2),
