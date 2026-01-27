@@ -58,17 +58,16 @@ def merit_system():
             print("Invalid input! Please ensure scores are numbers.")
 
     # Final Summary Table
-    print("\n" + "="*50)
+    print("\n")
     print(f"{'Student Name':<15} | {'Average':<10} | {'Status':<15} | {'Points'}")
     print("-"*50)
     
     for name, data in student_records.items():
         print(f"{name:<15} | {data['average']:<10} | {data['status']:<15} | {data['points']}")
     
-    print("="*50)
     print(f"Unique Subjects Covered: {', '.join(unique_subjects)}")
     print(f"Final Global Reward Pool Balance: {reward_pool}")
-    print("="*50)
+    
 
 if __name__ == "__main__":
     merit_system()
